@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MenuList from "./pages/MenuList";
+import Cart from "./pages/Cart";
+import OrderStatus from "./pages/OrderStatus";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<MenuList />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/status/:tableNumber" element={<OrderStatus />} />
+    </Routes>
+  </BrowserRouter>
+);
