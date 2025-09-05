@@ -166,7 +166,7 @@ export default function MenuList() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50">
           <div className="w-80 h-full bg-white shadow-2xl p-4 animate-slideIn">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold">🛒 Keranjang</h2>
+              <h2 className="text-xl font-bold text-gray-700">🛒 Pesanan</h2>
               <button onClick={() => setShowCart(false)}>
                 <X size={24} />
               </button>
